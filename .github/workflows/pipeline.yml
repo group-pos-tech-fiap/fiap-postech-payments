@@ -19,11 +19,7 @@ jobs:
           distribution: 'corretto'
 
       - name: Build with Gradle
-        run: './gradlew build'
-
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: build/
+        run: ./gradlew build
 
   unit-test:
     runs-on: ubuntu-latest
