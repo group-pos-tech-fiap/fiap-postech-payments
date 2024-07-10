@@ -19,9 +19,7 @@ jobs:
           distribution: 'corretto'
 
       - name: Build with Gradle
-        run: |
-          chmod +x ./gradlew
-          ./gradlew build
+        run: './gradlew build'
 
       - name: Display structure of downloaded files
         run: ls -R
