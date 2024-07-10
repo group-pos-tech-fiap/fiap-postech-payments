@@ -15,9 +15,7 @@ jobs:
           java-version: '17'
           distribution: 'corretto'
       - name: Build with Gradle
-        run: |
-          chmod +x ./gradlew
-          ./gradlew build
+        run: ./gradlew build
 
   unit-test:
     runs-on: ubuntu-latest
