@@ -11,9 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Generate Gradle Wrapper
-        run: ./gradlew wrapper
-
       - uses: actions/setup-java@v4
         with:
           java-version: '17'
