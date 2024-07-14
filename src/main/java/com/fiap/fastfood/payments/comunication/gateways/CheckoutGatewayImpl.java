@@ -4,6 +4,7 @@ import com.fiap.fastfood.payments.common.builders.CheckoutBuilder;
 import com.fiap.fastfood.payments.common.interfaces.datasource.SpringDataJPACheckoutRepository;
 import com.fiap.fastfood.payments.common.interfaces.gateways.CheckoutGateway;
 import com.fiap.fastfood.payments.core.entity.Checkout;
+import com.fiap.fastfood.payments.external.orm.CheckoutORM;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -19,9 +20,9 @@ public class CheckoutGatewayImpl implements CheckoutGateway {
     }
 
     @Override
-    public void save(Checkout checkout) {
+    public CheckoutORM save(Checkout checkout) {
         final var orm = CheckoutBuilder.fromDomainToOrm(checkout);
-        springDataJPACheckoutRepository.save(orm);
+        return springDataJPACheckoutRepository.save(orm);
     }
 
     @Override
