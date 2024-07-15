@@ -1,4 +1,4 @@
-package com.fiap.fastfood.payments.comunication.controllers;
+package com.fiap.fastfood.payments.communication.controllers;
 
 import com.fiap.fastfood.payments.common.builders.CheckoutBuilder;
 import com.fiap.fastfood.payments.common.dto.request.CheckoutRequest;

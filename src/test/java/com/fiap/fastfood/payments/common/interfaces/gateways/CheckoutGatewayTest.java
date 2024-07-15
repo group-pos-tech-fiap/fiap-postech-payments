@@ -2,7 +2,7 @@ package com.fiap.fastfood.payments.common.interfaces.gateways;
 
 import com.fiap.fastfood.payments.common.builders.CheckoutBuilder;
 import com.fiap.fastfood.payments.common.interfaces.datasource.SpringDataJPACheckoutRepository;
-import com.fiap.fastfood.payments.comunication.gateways.CheckoutGatewayImpl;
+import com.fiap.fastfood.payments.communication.gateways.CheckoutGatewayImpl;
 import com.fiap.fastfood.payments.core.entity.Checkout;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

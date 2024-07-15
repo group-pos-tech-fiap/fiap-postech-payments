@@ -1,4 +1,4 @@
-package com.fiap.fastfood.payments.comunication.gateways;
+package com.fiap.fastfood.payments.communication.gateways;
 
 import com.fiap.fastfood.payments.common.builders.CheckoutBuilder;
 import com.fiap.fastfood.payments.common.interfaces.datasource.SpringDataJPACheckoutRepository;
