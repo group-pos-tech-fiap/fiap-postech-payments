@@ -14,4 +14,5 @@ public class CheckoutResponse {
     private BigDecimal value;
     private String status;
     private LocalDateTime createAt;
+    private String nsu;
 }

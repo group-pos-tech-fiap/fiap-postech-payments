@@ -28,6 +28,8 @@ dependencies {
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.flywaydb:flyway-database-postgresql")
+	implementation("org.springframework.kafka:spring-kafka")
+	implementation("org.apache.kafka:kafka-clients:3.4.0")
 
 	runtimeOnly("org.postgresql:postgresql")
 	compileOnly("org.projectlombok:lombok")

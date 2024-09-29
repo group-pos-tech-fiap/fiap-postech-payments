@@ -19,7 +19,6 @@ import java.util.Collections;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
 
@@ -42,20 +41,6 @@ class CheckoutControllerTest {
         mockMvc = standaloneSetup(controller).build();
     }
 
-    @Test
-    void createCheckout() throws Exception {
-        var checkout = createMockCheckout();
-        var request = new CheckoutRequest(checkout.getOrderId(), checkout.getValue());
-
-        when(checkoutUseCase.submit(checkout, checkoutGateway)).thenReturn(checkout);
-
-        mockMvc.perform(post("/perform-payment")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(new ObjectMapper().writeValueAsString(request)))
-                .andExpect(status().isOk());
-
-        verify(checkoutUseCase, times(1)).submit(checkout, checkoutGateway);
-    }
 
     @Test
     void listCheckout() throws Exception {

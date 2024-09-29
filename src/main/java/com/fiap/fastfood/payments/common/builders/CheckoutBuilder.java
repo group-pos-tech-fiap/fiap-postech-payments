@@ -5,6 +5,8 @@ import com.fiap.fastfood.payments.common.dto.response.CheckoutResponse;
 import com.fiap.fastfood.payments.core.entity.Checkout;
 import com.fiap.fastfood.payments.external.orm.CheckoutORM;
 
+import java.time.LocalDateTime;
+
 public class CheckoutBuilder {
 
     public static Checkout fromRequestToDomain(CheckoutRequest request) {
@@ -12,6 +14,7 @@ public class CheckoutBuilder {
                 .status("In Progress")
                 .orderId(request.getOrderId())
                 .value(request.getValue())
+                .createdAt(LocalDateTime.now())
                 .build();
     }
 
@@ -22,6 +25,7 @@ public class CheckoutBuilder {
                 .orderId(checkout.getOrderId())
                 .value(checkout.getValue())
                 .createAt(checkout.getCreatedAt())
+                .nsu(checkout.getId())
                 .build();
     }
 

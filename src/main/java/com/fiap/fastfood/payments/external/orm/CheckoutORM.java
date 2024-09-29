@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
-@Entity
+@Entity(name = "checkout")
 @Data
 @Builder
 @NoArgsConstructor
